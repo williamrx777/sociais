@@ -17,5 +17,12 @@ public class ReacaoPublicada {
     @Column(nullable = false, length = 100, columnDefinition = "Text")
     private String nome;
 
+    @ManyToOne
+    @JoinColumn(name = "publicacao_id")
+    private Publicacao publicacao;
+
+    @ManyToOne
+    @JoinColumn(name = "reacao_id")
+    private Reacao reacao;
 
 }
